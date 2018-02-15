@@ -49,12 +49,6 @@
         <div th:each="gif : ${gifs}" class="col s12 l4">
             <a th:href="@{'/gif/' + ${gif.name}}">
                 <img th:src="@{'/gifs/' + ${gif.name} + '.gif'}" />
-                <!--
-                    In the a tag, make the class attribute have the value
-                    of 'mark favorite' or 'unmark favorite' according to
-                    the 'favorite' field of the 'gif' object from the
-                    loop above
-                -->
                 <a href="#" th:class="(${gif.favorite} ? 'un' : '') + 'mark favorite'"></a>
             </a>
         </div>
